@@ -37,3 +37,13 @@ h1.title {
 p.date {
   margin: 0 0 1em;
 }
+
+li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.posts li {
+  list-style-type: none;
+  margin: 1em 0;
+}
