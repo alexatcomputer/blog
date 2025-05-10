@@ -1,3 +1,8 @@
+$fg: oklch(14.5% 0 0); /* neutral 950 */
+$blue: oklch(42.4% 0.199 265.638); /* blue 800 */
+$light-blue: oklch(62.3% 0.214 259.815); /* blue 500 */
+$purple: oklch(43.8% 0.218 303.724); /* purple 800 */
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +10,7 @@
 
 html {
   height: 100%;
+  color: $fg;
 }
 
 body {
@@ -30,6 +36,18 @@ p {
   margin: 1em 0;
 }
 
+a {
+  color: $blue;
+}
+
+a:hover {
+  color: $light-blue;
+}
+
+a:visited {
+  color: $purple;
+}
+
 h1.title {
   margin: 0;
 }
@@ -51,6 +69,7 @@ li {
   font-weight: 600;
   text-decoration: none;
   margin-right: .5em;
+  color: $fg;
 }
 
 .navbar a:hover {
