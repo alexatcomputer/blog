@@ -1,4 +1,5 @@
 $fg: oklch(14.5% 0 0); /* neutral 950 */
+$fg-light: oklch(43.9% 0 0); /* neutral 600 */
 $blue: oklch(42.4% 0.199 265.638); /* blue 800 */
 $light-blue: oklch(62.3% 0.214 259.815); /* blue 500 */
 $purple: oklch(43.8% 0.218 303.724); /* purple 800 */
@@ -71,13 +72,12 @@ li {
 
 .navbar a {
   font-weight: 600;
-  text-decoration: none;
   margin-right: .5em;
   color: $fg;
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  color: $fg-light;
 }
 
 .posts li {
