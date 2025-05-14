@@ -1,5 +1,6 @@
 $fg: oklch(14.5% 0 0); /* neutral 950 */
 $fg-light: oklch(43.9% 0 0); /* neutral 600 */
+$bg: oklch(98.5% 0 0); /* neutral 50 */
 $blue: oklch(42.4% 0.199 265.638); /* blue 800 */
 $light-blue: oklch(62.3% 0.214 259.815); /* blue 500 */
 $purple: oklch(43.8% 0.218 303.724); /* purple 800 */
@@ -12,6 +13,7 @@ $purple: oklch(43.8% 0.218 303.724); /* purple 800 */
 html {
   height: 100%;
   color: $fg;
+  background-color: $bg;
 }
 
 body {
