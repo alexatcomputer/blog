@@ -24,4 +24,4 @@ Now there are still many problems with the website but I'm still proud of it. Be
 
 ![screenshot of blog](screenshot.png)
 
-As of writing, I have not published the site but I have bought the domain [alexatcomputer.com](https://alexatcomputer.com). To publish the site I will be using GitHub pages and the steps to do so are in the [Zola documentation](https://www.getzola.org/documentation/deployment/github-pages/). I shouldn't find any trouble setting it up but if I do I will write another blog post explaining my frustrations but hopefully that won't be the case.
+As of writing, I have not published the site but I have bought the domain [alexatcomputer.com](https://alexatcomputer.com).  This website's source is on a [GitHub repo](https://github.com/alexatcomputer/alexatcomputer.github.io) and I will use GitHub pages to host it. I shouldn't find any trouble setting it up but if I do I will write another blog post explaining my frustrations but hopefully that won't be the case.
