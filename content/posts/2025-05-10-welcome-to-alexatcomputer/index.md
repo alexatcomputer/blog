@@ -1,5 +1,6 @@
 +++
 title = "Welcome to alex@computer"
+description = "An introduction to the site and the making of it."
 +++
 
 This is a tech focused blog which will chronicle any projects that I do or new things that I learn about.

@@ -8,7 +8,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-  <title>alex@computer</title>
+  {% if page.title %}
+	  {% set page_title = page.title %}
+  {% elif section.title %}
+	  {% set page_title = section.title %}
+  {% else %}
+	  {% set page_title = "Homepage" %}
+  {% endif %}
+  {% if page.description %}
+	  {% set page_description = page.description %}
+  {% elif section.description %}
+	  {% set page_description = section.description %}
+  {% else %}
+	  {% set page_description = "" %}
+  {% endif %}
+  <title>{{page_title}} | alex@computer</title>
+  <meta property="description" content="{{ page_description }}">
 </head>
 
 <header>
