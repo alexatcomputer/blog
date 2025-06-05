@@ -24,6 +24,7 @@ html {
   height: 100%;
   color: $lt-body;
   background-color: $lt-bg;
+  line-height: 1.4;
 }
 
 body {
@@ -58,6 +59,15 @@ a:visited {
   color: $purple;
 }
 
+ul {
+  margin:  1em 0;
+}
+
+li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
 img {
   width: 100%;
 }
@@ -70,11 +80,6 @@ p.date {
   margin: 0 0 1em;
   color: $lt-head;
   font-weight: 500;
-}
-
-li {
-  list-style-type: disc;
-  list-style-position: inside;
 }
 
 .navbar {
