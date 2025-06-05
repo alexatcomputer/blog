@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title></title>
+    <link rel="self" type="application/atom+xml" href="https://alexatcomputer.com/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://alexatcomputer.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-06-02T00:00:00+00:00</updated>
+    <id>https://alexatcomputer.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Building a Corne Keyboard (crkbd)</title>
+        <published>2025-06-02T00:00:00+00:00</published>
+        <updated>2025-06-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              alex@computer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alexatcomputer.com/posts/crkbd-build/"/>
+        <id>https://alexatcomputer.com/posts/crkbd-build/</id>
+        
+        <content type="html" xml:base="https://alexatcomputer.com/posts/crkbd-build/">&lt;p&gt;Around two months ago I started working on a project to build a split ortholinear keyboard known as the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;foostan&#x2F;crkbd&quot;&gt;Corne keyboard&lt;&#x2F;a&gt; or crkbd for short. It was a difficult process at times but it allowed me to learn a lot about soldering electronics and programming firmware.&lt;&#x2F;p&gt;
+&lt;p&gt;Before building the keyboard keyboard I had been using the integrated keyboard on my laptop and a beat up free office keyboard. This was a great upgrade from my previous keyboards and it&#x27;s hard to go back to a regular membrane keyboard after switching.&lt;&#x2F;p&gt;
+&lt;p&gt;This article is not a build guide but a log of my journey of building the keyboard from start to finish. It will outline the mistakes I made along the way and what I would do differently if I could do it again.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ordering-the-parts&quot;&gt;Ordering the parts&lt;&#x2F;h2&gt;
+&lt;p&gt;I would say that the hardest part of the entire keyboard build was ordering the parts. There were a wide variety of parts that were needed in order to build the keyboard. Below is a list of all of the parts that I ordered to build the keyboard.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.littlekeyboards.com&#x2F;collections&#x2F;corne-pcb-kits&#x2F;products&#x2F;corne-mx-hotswap-pcb-kit-v3?variant=39656127692867&quot;&gt;Corne MX Hotswap v3.0.1 PCB Kit&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.littlekeyboards.com&#x2F;collections&#x2F;mcus&#x2F;products&#x2F;elite-pi&quot;&gt;Elite Pi X2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.littlekeyboards.com&#x2F;products&#x2F;oled-screen&quot;&gt;128X32 OLED Screen X2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.littlekeyboards.com&#x2F;collections&#x2F;corne-cases&#x2F;products&#x2F;corne-analyst-case?variant=39499977949251&quot;&gt;Corne Analyst Keyboard Case&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.littlekeyboards.com&#x2F;collections&#x2F;corne-cases&#x2F;products&#x2F;corne-switch-plate-foam&quot;&gt;Corne Switch Plate Foam 2mm&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;milktooth.com&#x2F;products&#x2F;silent-t1&quot;&gt;Durock Silent T1 (Shrimp) Silent&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;Mechkeeb-Profile-Orange-Mechanical-Keyboard&#x2F;dp&#x2F;B0BWMP2BR2&quot;&gt;XDA Profile 1X Blank White 50pcs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;Anker-Charger-Charging-Samsung-Galaxy&#x2F;dp&#x2F;B0BPCBP15P&quot;&gt;Anker USB A to USB C Cable&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;SinLoon-Auxiliary-Smartphones-Tablets-Microphone&#x2F;dp&#x2F;B072TYSV61&quot;&gt;SinLoon 3.5mm TRRS Cable&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I ordered most of the parts from a shop called &lt;a href=&quot;https:&#x2F;&#x2F;www.littlekeyboards.com&#x2F;&quot;&gt;Little Keyboards&lt;&#x2F;a&gt; because they had a kit of all the parts needed to build the Corne keyboard. I attempted to find all of the parts separately and even looked into a PCB manufacturer to build the PCB but because this was my first ever keyboard build I didn&#x27;t want to make it any more complicated than it already was.&lt;&#x2F;p&gt;
+&lt;p&gt;I went with a silent switches because I knew that I would be using this keyboard in a shared space and I didn&#x27;t want to be that guy with a super loud keyboard.&lt;&#x2F;p&gt;
+&lt;p&gt;There were a couple of things that I ordered that if I were to order them again I would do differently. The TRRS cable that I ordered to connect the two halves of the keyboard is shorter than I would have liked making them too close together. When ordering the plate foam for the keyboard I went with 2mm instead of 3mm to be safe but now there is about a 1mm gap between the foam and the case which limits the amount of sound that it can dampen. I hadn&#x27;t realized when I ordered the keycaps, but it took around 2 weeks for them to ship which forced me to wait after the keyboard was completed to be able to use it.&lt;&#x2F;p&gt;
+&lt;p&gt;Another thing that I wish I had done was ordered a socket and pins to socket the microcontroller to the PCB. This would make it easier to remove it in the case that one of the microcontrollers dies and needs to be replaced. As of writing I have not had a microcontroller fail but I am accepting it as an inevitability.&lt;&#x2F;p&gt;
+&lt;p&gt;Next I had to find all the equipment to assemble the keyboard. The build guide from &lt;a href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;vzDTdLaAzXc&quot;&gt;Josean Martienez&lt;&#x2F;a&gt; gave great recommendations for what equipment to use to solder the keyboard. Below is a list of all of the equipment I ordered to solder the keyboard.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;gp&#x2F;product&#x2F;B082F1WKP9&quot;&gt;YIHUA 926 III 60W Digital Display Soldering Iron Station Kit&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;gp&#x2F;product&#x2F;B0759P8GBZ&quot;&gt;Mandala Crafts Lead Free Solder Wire&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;gp&#x2F;product&#x2F;B09JLYTZ73&quot;&gt;Mr. Pen- Heat Tape&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.com&#x2F;gp&#x2F;product&#x2F;B00425FUW2&quot;&gt;MG Chemicals - 8341-10ML 8341 No Clean Flux Paste&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;building-the-keyboard&quot;&gt;Building the keyboard&lt;&#x2F;h2&gt;
+&lt;p&gt;Once I had ordered the parts I was ready to build the keyboard. I started out by setting up a soldering workspace. This was the first time that I&#x27;ve ever soldered something so I didn&#x27;t have a workspace to safely manage the fumes of the solder. I made my own makeshift setup using my open garage with a fan blowing the fumes outside.&lt;&#x2F;p&gt;
+&lt;p&gt;I followed a build guide from &lt;a href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;vzDTdLaAzXc&quot;&gt;Josean Martienez&lt;&#x2F;a&gt; as well as referencing the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;foostan&#x2F;crkbd&#x2F;blob&#x2F;main&#x2F;docs&#x2F;corne-cherry&#x2F;v3&#x2F;buildguide_en.md&quot;&gt;GitHub build guide&lt;&#x2F;a&gt;. The video guide gave me more confidence and reassurance that I was not destroying the components. The first components I installed were the diodes and the microcontroller. Once soldered I was able to test each of the switches of the keyboard with a pair or tweezers using the keyboard input tester from the &lt;a href=&quot;https:&#x2F;&#x2F;config.qmk.fm&#x2F;#&#x2F;test&quot;&gt;QMK Configurator&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Once I had verified that all of the switches were working I installed the hot swap sockets and LED&#x27;s. Before I started building the keyboard I thought that I would skip installing the LED&#x27;s onto the board because I would most likely keep them turned off. However, after installing all of the other components I felt like it wouldn&#x27;t be complete without them. If even one of the pins of the LED is not soldered to the board all of the LEDs will not light up. It took me about one hour to solder the LEDs and then another hour to continuously troubleshoot what LED wasn&#x27;t soldered to each of the four tiny solder pads. It was very frustrating but rewarding once all of them lit up. To this day I keep the LED&#x27;s on the keyboard off but I&#x27;m still glad that went through with actually installing it.&lt;&#x2F;p&gt;
+&lt;p&gt;The OLED was easy to install, the OLED that I ordered came with diodes that I cut off the legs of to create pins for the socket and I just had to solder the socket to the PCB and snap in the OLED.&lt;&#x2F;p&gt;
+&lt;p&gt;I had a similar issue when I went to put in the switches as I did with the LEDs. The g and h key would not work. I questioned whether I had even tested those two keys before and if those keys were broken on the keyboard. But it turns out I had just forgotten to solder a side of the hot swap socket to the PCB on both sides.&lt;&#x2F;p&gt;
+&lt;p&gt;After installing all of the components it was relatively easy to install the case using the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;foostan&#x2F;crkbd&#x2F;blob&#x2F;main&#x2F;docs&#x2F;corne-cherry&#x2F;v3&#x2F;buildguide_en.md#plates--switches&quot;&gt;GitHub build guide&lt;&#x2F;a&gt; and that was it (at least for the hardware).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;installing-and-customizing-the-firmware&quot;&gt;Installing and customizing the firmware&lt;&#x2F;h2&gt;
+&lt;p&gt;I always had the idea of using QMK and having the firmware of the keyboard in a git repo to track any changes I make. After reading through the &lt;a href=&quot;https:&#x2F;&#x2F;docs.qmk.fm&#x2F;newbs&quot;&gt;QMK tutorial&lt;&#x2F;a&gt; and the other documentation I learned about &lt;a href=&quot;https:&#x2F;&#x2F;docs.qmk.fm&#x2F;newbs_external_userspace&quot;&gt;external userspaces&lt;&#x2F;a&gt;. I didn&#x27;t like the idea of my firmware being a fork of the main &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;qmk&#x2F;qmk_firmware&quot;&gt;QMK GitHub repository&lt;&#x2F;a&gt; which had all of the keyboards QMK supported so external user spaces solved my problem perfectly. I forked the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;qmk&#x2F;qmk_userspace&quot;&gt;qmk_userspace repository&lt;&#x2F;a&gt; and I had my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexatcomputer&#x2F;qmk_userspace&quot;&gt;own repo&lt;&#x2F;a&gt; with the only keymap I needed.&lt;&#x2F;p&gt;
+&lt;p&gt;Since I was using the Elite-Pi microcontroller with the RP2040 chip and not the ATmega32u4, there were a couple of extra steps needed to get it working with QMK. The &lt;a href=&quot;https:&#x2F;&#x2F;docs.keeb.io&#x2F;elite-pi-guide&quot;&gt;keeb.io docs&lt;&#x2F;a&gt; were an incredible resource in explaining what was needed to flash it with QMK firmware. I had to add a line to the rules.mk to convert it in order to map it to the correct pins. I was able to compile the firmware, hit the reset switch twice on the PCB and drop the compiled .uf2 file into the storage device the microcontroller created.&lt;&#x2F;p&gt;
+&lt;p&gt;Once I had the basics needed to flash the firmware I was able to start customizing. I started simple by using transparent keys for modifiers on higher layers to make it easier to edit the keymap later. After that I switched the ctrl and alt keys to have the ctrl key on the thumb cluster. So far those are the only changes made, but in the future I would like to add more to the keyboard. I&#x27;d like to add home row mods, media keys and a function row in the future and when I do I will write a post about them.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;learning&quot;&gt;Learning&lt;&#x2F;h2&gt;
+&lt;p&gt;Once the keycaps were finally shipped and installed I started my journey of learning to type on my new keyboard. I never formally learned how to touch type and instead just developed a muscle memory which worked for me. This lack of proper learning really hindered my ability to properly learn where to put my fingers. I started using &lt;a href=&quot;https:&#x2F;&#x2F;www.keybr.com&#x2F;&quot;&gt;keybr.com&lt;&#x2F;a&gt; to get the basics down. Since the keycaps were blank I printed out the keymap layers using the &lt;a href=&quot;https:&#x2F;&#x2F;config.qmk.fm&#x2F;#&#x2F;print&quot;&gt;QMK configurator&lt;&#x2F;a&gt; to reference when needed.&lt;&#x2F;p&gt;
+&lt;p&gt;Just as I was starting to develop the muscle memory of using the keyboard I had to write 4 essays for final exams. I had the goal to use the keyboard to type up all the essays and I was able to do it. This really helped me to get used to the layout and where all the keys were and it helped me to become more proficient on the keyboard.&lt;&#x2F;p&gt;
+&lt;p&gt;It was a slow and frustrating journey, and I still don&#x27;t think that I am at a level I would like to be at. I still struggle in finding where the symbols are and have the reference the keymap layers sheet I printed out from time to time.&lt;&#x2F;p&gt;
+&lt;p&gt;Now when I go back to a regular keyboard it takes more time for my muscle memory to kick back in. Having the arrow keys on the home row has rewired my brain and having the reach to the corner of the keyboard to use them is more infuriating now than ever. But I do think that I am a better typist after learning the new layout. I have noticed that I am keeping my hands on the home row more even when I&#x27;m on a regular keyboard.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;concluding-thoughts&quot;&gt;Concluding thoughts&lt;&#x2F;h2&gt;
+&lt;p&gt;Overall, I&#x27;m really happy that I took on such a project. It was really fun to learn about something that I had no experience in and have to build something that is so unique. This won&#x27;t be the last keyboard I ever build because there is so much more that I haven&#x27;t explored.&lt;&#x2F;p&gt;
+&lt;p&gt;In the future I would like to build a keyboard from scratch which would require me to source all of the components myself and order the PCB through a PCB manufacturer. I&#x27;m glad I didn&#x27;t do that for my first keyboard build but now that I have the experience I think that I am ready to do it.&lt;&#x2F;p&gt;
+&lt;p&gt;All that being said, this is a great project that I believe anyone with enough time on their hands and willingness to learn can do and have a good time doing it.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Welcome to alex@computer</title>
+        <published>2025-05-10T00:00:00+00:00</published>
+        <updated>2025-05-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              alex@computer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alexatcomputer.com/posts/welcome-to-alexatcomputer/"/>
+        <id>https://alexatcomputer.com/posts/welcome-to-alexatcomputer/</id>
+        
+        <content type="html" xml:base="https://alexatcomputer.com/posts/welcome-to-alexatcomputer/">&lt;p&gt;This is a tech focused blog which will chronicle any projects that I do or new things that I learn about.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve had the idea to start a blog for a long time now. I&#x27;ve wanted to document my projects, and be able to look back and see what I have done throughout the years. I&#x27;ve also always wanted to have my own website because I can have a much more of a say in the look of my site compared to any other social media profile. I&#x27;m able to change literally every detail and even created this layout from scratch (with some heavy inspiration) but I will discuss that later.&lt;&#x2F;p&gt;
+&lt;p&gt;I got the inspiration for the name of the blog when I was watching some &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@chrisatmachine&quot;&gt;chris@machine&lt;&#x2F;a&gt; tutorials on Neovim. I thought the name was so interesting that I used it with my own twist.&lt;&#x2F;p&gt;
+&lt;p&gt;This blog is built with the static site generator called &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; which makes it really easy to make a static blog website. Initially, I was looking for a theme that was already built but I couldn&#x27;t find one that was just right. Most of them had too many features and didn&#x27;t look quite like what I was looking for. That&#x27;s not to say that these themes wouldn&#x27;t work for anyone, but they just weren&#x27;t right for me. I got the confidence to finally build the website from scratch from Niklas Fasching&#x27;s blog post titled &lt;a href=&quot;https:&#x2F;&#x2F;niklasfasching.de&#x2F;posts&#x2F;just-enough-css&#x2F;&quot;&gt;Just enough CSS for a blog&lt;&#x2F;a&gt;. I learned some good defaults such as having two fonts max and what to set the line height to. Just looking at his blog and seeing how little lines of CSS it took to get to a good looking blog gave me the confidence to do it myself.&lt;&#x2F;p&gt;
+&lt;p&gt;When I started to build the website I was overwhelmed with the many problems that I would need to solve in order to get a usable web layout. I would need to choose fonts, colors, make the layout responsive for mobile and desktop viewing and I would need a domain and a place to host it.&lt;&#x2F;p&gt;
+&lt;p&gt;Choosing a font is probably the easiest thing to do but it took me many different tries to find the right font. Initially, I chose two fonts one being a serif font for headings and the other being a sans serif font for the text. However, the two fonts made it more busy than it should be and I decided on one font which was &lt;a href=&quot;https:&#x2F;&#x2F;fonts.google.com&#x2F;specimen&#x2F;DM+Sans&quot;&gt;DM Sans&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Next I had to choose colors. Similar to when choosing a font I started out more complex and then ended up going with a far more simple design. I thought that since I use gruvbox in my terminal that It would be a good idea to make the website the same colors. While I liked the dark color scheme from gruvbox, the light theme doesn&#x27;t work well in in the web. Instead I decided on a very simple light-mode only website (for now), and for any accent colors such as links I have used the tailwindcss colors.&lt;&#x2F;p&gt;
+&lt;p&gt;Then came one of the most difficult parts which was choosing the layout and making it responsive. When choosing the layout of the site I went back and forth on how big I should make headings and the amount of padding I should use. But when I stumbled upon &lt;a href=&quot;https:&#x2F;&#x2F;tom.preston-werner.com&#x2F;&quot;&gt;Tom Preston-Werner&#x27;s blog&lt;&#x2F;a&gt; it changed the way that I looked at blog layouts forever. It was so simple using the same font size for everything and only changing the font weight to establish hierarchy.&lt;&#x2F;p&gt;
+&lt;p&gt;When making the website responsive to mobile and readable on web I learned the basics from &lt;a href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;ZYV6dYtz4HA&quot;&gt;Dani Krossing&#x27;s How to Make a Website Responsive tutorial&lt;&#x2F;a&gt;. This video introduced me to media queries and setting the max-width which is all that is needed for a basic responsive website.&lt;&#x2F;p&gt;
+&lt;p&gt;Now there are still many problems with the website but I&#x27;m still proud of it. Below is a screenshot of what the blog looks like today to be an archive.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;alexatcomputer.com&#x2F;posts&#x2F;welcome-to-alexatcomputer&#x2F;screenshot.png&quot; alt=&quot;screenshot of blog&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;As of writing, I have not published the site but I have bought the domain &lt;a href=&quot;https:&#x2F;&#x2F;alexatcomputer.com&quot;&gt;alexatcomputer.com&lt;&#x2F;a&gt;.  This website&#x27;s source is on a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexatcomputer&#x2F;alexatcomputer.github.io&quot;&gt;GitHub repo&lt;&#x2F;a&gt; and I will use GitHub pages to host it. I shouldn&#x27;t find any trouble setting it up but if I do I will write another blog post explaining my frustrations but hopefully that won&#x27;t be the case.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
